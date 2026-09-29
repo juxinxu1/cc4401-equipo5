@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Apps del proyecto
+    'core',
+    'usuarios',
 ]
 
 MIDDLEWARE = [
@@ -123,3 +126,16 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Usuarios y autenticación
+# Se usa un modelo de usuario propio (usuarios.User) con apodo y pronombres.
+# Debe definirse antes de la primera migración.
+
+AUTH_USER_MODEL = 'usuarios.User'
+
+# Página de login a la que se envía a quien intenta entrar a una vista protegida,
+# y a dónde se redirige después de iniciar o cerrar sesión.
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'inicio'
+LOGOUT_REDIRECT_URL = 'inicio'
