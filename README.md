@@ -7,7 +7,7 @@ Aplicación web desarrollada en Django para el curso **CC4401 Ingeniería de Sof
 
 ## Requisitos
 
-- Python 3.12 o superior
+- Python 3.10 (Django 3.2 no funciona con Python 3.11 o superior)
 - Git
 
 ## Cómo levantar el proyecto
@@ -22,7 +22,7 @@ Aplicación web desarrollada en Django para el curso **CC4401 Ingeniería de Sof
 2. Crear y activar un entorno virtual:
 
    ```bash
-   python3 -m venv .venv
+   python3.10 -m venv .venv
    source .venv/bin/activate        # macOS / Linux
    .venv\Scripts\activate           # Windows
    ```
