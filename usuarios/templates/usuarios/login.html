@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block titulo %}Ingresar{% endblock %}
+
+{% block contenido %}
+<section class="tarjeta">
+    <h1>Ingresa a tu cuenta</h1>
+    <form method="post" class="formulario" novalidate>
+        {% csrf_token %}
+        {% include 'usuarios/_campos.html' %}
+        <input type="hidden" name="next" value="{{ next }}">
+        <button type="submit" class="boton">Ingresar</button>
+    </form>
+    <p class="tarjeta__pie">¿No tienes cuenta? <a href="{% url 'registro' %}">Créala aquí</a>.</p>
+</section>
+{% endblock %}

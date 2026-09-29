@@ -14,6 +14,17 @@
             <nav class="navegacion" aria-label="Navegación principal">
                 <a href="{% url 'inicio' %}">Inicio</a>
                 {% block navegacion %}{% endblock %}
+                {% if user.is_authenticated %}
+                    {# Se muestra el apodo, nunca el nombre legal #}
+                    <span class="navegacion__usuario">Hola, {{ user.nombre_visible }}</span>
+                    <form method="post" action="{% url 'logout' %}" class="navegacion__salir">
+                        {% csrf_token %}
+                        <button type="submit" class="boton-enlace">Cerrar sesión</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login' %}">Ingresar</a>
+                    <a href="{% url 'registro' %}" class="boton boton--pequeno">Crear cuenta</a>
+                {% endif %}
             </nav>
         </div>
     </header>

@@ -101,6 +101,166 @@ h1 {
     max-width: 40rem;
 }
 
+.portada__acciones {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.navegacion__usuario {
+    color: var(--texto-suave);
+}
+
+.navegacion__salir {
+    margin: 0;
+}
+
+/* Botones */
+
+.boton {
+    display: inline-block;
+    padding: 0.65rem 1.25rem;
+    border: 1px solid var(--primario);
+    border-radius: var(--radio);
+    background: var(--primario);
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: var(--primario-oscuro);
+    border-color: var(--primario-oscuro);
+}
+
+.navegacion a.boton {
+    color: #ffffff;
+}
+
+.navegacion a.boton:hover {
+    text-decoration: none;
+}
+
+.boton--secundario {
+    background: var(--superficie);
+    color: var(--primario);
+}
+
+.boton--secundario:hover {
+    background: var(--fondo);
+    color: var(--primario-oscuro);
+}
+
+.boton--pequeno {
+    padding: 0.35rem 0.9rem;
+}
+
+/* Botón que se ve como enlace (se usa para cerrar sesión, que va por POST) */
+.boton-enlace {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--primario);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boton-enlace:hover {
+    text-decoration: underline;
+}
+
+/* Tarjeta y formularios */
+
+.tarjeta {
+    max-width: 28rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+}
+
+.tarjeta h1 {
+    font-size: 1.6rem;
+}
+
+.tarjeta__pie {
+    margin: 1.25rem 0 0;
+    color: var(--texto-suave);
+}
+
+.tarjeta__pie a {
+    color: var(--primario);
+    font-weight: 600;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario .boton {
+    margin-top: 0.5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.campo label {
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    font: inherit;
+    background: var(--superficie);
+    color: var(--texto);
+}
+
+.campo--error input {
+    border-color: var(--error);
+}
+
+.campo__ayuda {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+}
+
+/* Las ayudas de contraseña de Django vienen como lista */
+.campo__ayuda ul {
+    margin: 0.25rem 0 0;
+    padding-left: 1.1rem;
+}
+
+.campo__error {
+    margin: 0;
+    color: var(--error);
+    font-size: 0.9rem;
+}
+
+.error-general {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--error);
+    border-radius: var(--radio);
+    background: var(--error-fondo);
+    color: var(--error);
+}
+
+.error-general p {
+    margin: 0;
+}
+
 /* Mensajes (éxito, error, etc.) */
 
 .mensajes {

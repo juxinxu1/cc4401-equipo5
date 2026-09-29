@@ -9,5 +9,11 @@
         Aquí va una descripción breve de lo que permite hacer la aplicación.
         Complétala cuando el equipo defina el tema del proyecto.
     </p>
+    {% if not user.is_authenticated %}
+        <div class="portada__acciones">
+            <a href="{% url 'registro' %}" class="boton">Crear cuenta</a>
+            <a href="{% url 'login' %}" class="boton boton--secundario">Ya tengo cuenta</a>
+        </div>
+    {% endif %}
 </section>
 {% endblock %}
