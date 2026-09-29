@@ -1,0 +1,149 @@
+/* Estilos generales del sitio.
+   Paleta neutra y de alto contraste; tamaños en rem para que respeten
+   el tamaño de letra que cada persona configura en su navegador. */
+
+:root {
+    --fondo: #f5f6f8;
+    --superficie: #ffffff;
+    --texto: #1c2330;
+    --texto-suave: #4b5563;
+    --borde: #d6dae1;
+    --primario: #245e63;
+    --primario-oscuro: #1a4649;
+    --error: #b42318;
+    --error-fondo: #fdecea;
+    --exito: #1f6f43;
+    --exito-fondo: #e6f4ec;
+    --radio: 0.5rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* Encabezado y navegación */
+
+.encabezado {
+    background: var(--superficie);
+    border-bottom: 1px solid var(--borde);
+}
+
+.encabezado__fila {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+}
+
+.marca {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.navegacion a {
+    color: var(--primario);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navegacion a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido */
+
+.contenido {
+    flex: 1;
+    padding-top: 2.5rem;
+    padding-bottom: 3rem;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+}
+
+.portada__texto {
+    font-size: 1.1rem;
+    color: var(--texto-suave);
+    max-width: 40rem;
+}
+
+/* Mensajes (éxito, error, etc.) */
+
+.mensajes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.mensaje {
+    padding: 0.75rem 1rem;
+    border-radius: var(--radio);
+    background: var(--superficie);
+    border: 1px solid var(--borde);
+    margin-bottom: 0.5rem;
+}
+
+.mensaje--success {
+    background: var(--exito-fondo);
+    border-color: var(--exito);
+    color: var(--exito);
+}
+
+.mensaje--error {
+    background: var(--error-fondo);
+    border-color: var(--error);
+    color: var(--error);
+}
+
+/* Pie de página */
+
+.pie {
+    border-top: 1px solid var(--borde);
+    background: var(--superficie);
+    color: var(--texto-suave);
+    font-size: 0.9rem;
+    padding: 1rem 0;
+}
+
+/* Foco visible para navegar con teclado */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid var(--primario);
+    outline-offset: 2px;
+}
